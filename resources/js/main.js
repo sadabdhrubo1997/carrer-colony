@@ -61,3 +61,12 @@ $("#testimonialSlider").slick({
     centerPadding: '50rem',
     dots: true,
 })
+
+$("#heroSlider").slick({
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    fade: true,
+    cssEase: 'linear',
+    autoplay:true
+})
