@@ -1,0 +1,20 @@
+@import './base';
+@import './font';
+@import './hero';
+@import './service';
+@import './howItWorks1';
+@import './categories';
+@import './project';
+@import './testimonial';
+@import './footer';
+
+#copyright{
+    background-color: rgba(5, 170, 209, 1);
+    padding: 3rem;
+    p{
+        font-size: 1.6rem;
+        font-family: pMedium;
+        color: #ffffff;
+        text-align: center;
+    }
+}
