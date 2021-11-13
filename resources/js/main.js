@@ -2,34 +2,29 @@
 
 let myHtmlElement = document.querySelector("html")
 
-window.addEventListener("load", function () {
 
 
-    // Responsive html font size
-    const iw = window.innerWidth;
-    const rootScreenWidth = 1366;
-    const rootFontPercentage = 44.46;
-    if (iw<= 1366) {
-        myHtmlElement.setAttribute("style", `font-size:${rootFontPercentage}%`)
-    }
 
-    else{
-
-        let currentFontSize = (rootFontPercentage * iw) / rootScreenWidth;
-        myHtmlElement.setAttribute("style", `font-size:${currentFontSize}%`)
-    }
-
-})
+// Responsive html font size
+const iw = window.innerWidth;
+const rootScreenWidth = 1366;
+const rootFontPercentage = 44.46;
+if (iw > 1366) {
+    console.log(iw);
+    let currentFontSize = (rootFontPercentage * iw) / rootScreenWidth;
+    myHtmlElement.setAttribute("style", `font-size:${currentFontSize}%`)
+} else {
+    myHtmlElement.setAttribute("style", `font-size:${rootFontPercentage}%`)
+}
 
 window.addEventListener("resize", function () {
-  
-    const iw2 = window.innerWidth;
-    const rootScreenWidth2 = 1366;
-    const rootFontPercentage2 = 44.46;
-
-
-    let currentFontSize = (rootFontPercentage2 * iw2) / rootScreenWidth2;
-    myHtmlElement.setAttribute("style", `font-size:${currentFontSize}%`)
+    if (iw > 1366) {
+        console.log(iw);
+        let currentFontSize = (rootFontPercentage * iw) / rootScreenWidth;
+        myHtmlElement.setAttribute("style", `font-size:${currentFontSize}%`)
+    } else {
+        myHtmlElement.setAttribute("style", `font-size:${rootFontPercentage}%`)
+    }
 
 })
 
@@ -41,8 +36,8 @@ window.addEventListener("resize", function () {
 
 $('#serviceSliderWrapper').slick({
     arrow: true,
-    autoplay:true,
-    autoplaySpeed:5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     prevArrow: $(".serviceSliderPrevBtn"),
     nextArrow: $(".serviceSliderNextBtn"),
     slidesToShow: 3,
@@ -52,8 +47,8 @@ $('#serviceSliderWrapper').slick({
 
 $("#testimonialSlider").slick({
     arrow: false,
-    autoplay:true,
-    autoplaySpeed:5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
@@ -68,5 +63,5 @@ $("#heroSlider").slick({
     speed: 1000,
     fade: true,
     cssEase: 'linear',
-    autoplay:true
+    autoplay: true
 })

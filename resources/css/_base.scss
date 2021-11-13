@@ -6,7 +6,10 @@
 
 html {
     font-size: 44.46%;
-    overflow-x: hidden;
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
 }
 
 
