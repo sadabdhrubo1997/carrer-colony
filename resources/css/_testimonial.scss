@@ -1,6 +1,7 @@
 #testimonial {
     padding-top: 8rem;
     position: relative;
+    overflow-x: hidden;
 
     &::after {
         position: absolute;

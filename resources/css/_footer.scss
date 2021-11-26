@@ -9,12 +9,9 @@
     background-repeat: no-repeat;
 
 
-
-
-
-
     .mainWrapper {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         position: relative;
         z-index: 9999;
@@ -22,6 +19,7 @@
 
         .left {
             width: 45.5rem;
+            margin-bottom: 0;
 
             a {
                 img {
@@ -59,6 +57,7 @@
         }
 
         .common {
+            margin-bottom: 0;
             h3 {
                 font-size: 2.2rem;
                 color: rgba(10, 2, 19, 1);
@@ -82,6 +81,7 @@
         }
 
         .social {
+            margin-bottom: 0;
             h3 {
                 font-size: 2.2rem;
                 color: rgba(10, 2, 19, 1);

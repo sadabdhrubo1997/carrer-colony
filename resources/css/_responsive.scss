@@ -1,0 +1,18 @@
+@import './responsive/heroRes';
+@import './responsive/serviceRes';
+@import './responsive/howItsWork1Res';
+@import './responsive/categoriesRes';
+@import './responsive/projectRes';
+@import './responsive/testimonialRes';
+@import './responsive/footerRes';
+
+
+
+
+
+// globl style for responsive design
+@media only screen and (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+}
