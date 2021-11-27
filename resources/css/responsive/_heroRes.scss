@@ -1,5 +1,245 @@
 @media only screen and (max-width: 1024px) {
-    #heroArea{
-        display: none;
+    #heroArea {
+        padding-top: 0;
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 64rem;
+            z-index: 9;
+            background-image: url("./../images/bg/heloAfter.svg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+        }
+
+        .mainWrapper {
+            .navbar {
+                display: none;
+            }
+
+            .mobileNav {
+                padding-top: 3rem;
+                display: flex;               
+                align-items: center;
+                height: 5rem;
+                justify-content: space-between;
+                
+                .left{
+                    width: 40%;
+                    img{
+                        width: 100%;
+                    }
+                }
+
+
+                #sideNavMenu {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    z-index: 9999999999999999999999999999;
+                    background-color: rgb(255, 255, 255);
+                    height: 100vh;
+                    width: 100vw;
+                    overflow-y: scroll;
+                    transition: .3s;
+                    -webkit-transition: .3s;
+                    -moz-transition: .3s;
+                    -ms-transition: .3s;
+                    -o-transition: .3s;
+
+                    &.show {
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        z-index: 9999999999999999999999999999;
+                        background-color: rgb(255, 255, 255);
+                        height: 100vh;
+                        width: 100vw;
+                        overflow-y: scroll;
+                        transition: .3s;
+                        -webkit-transition: .3s;
+                        -moz-transition: .3s;
+                        -ms-transition: .3s;
+                        -o-transition: .3s;
+                    }
+
+
+                    .mainWrapper {
+                        .closeButtonWrapper {
+                            padding: 4rem;
+
+                            img {
+                                width: 5rem;
+                                height: auto;
+                            }
+                        }
+
+                        .menuItems {
+                            padding-left: 4rem;
+
+                            ul {
+                                list-style: none;
+
+                                li {
+                                    font-size: 4rem;
+                                    color: rgba(78, 78, 78, 1);
+                                    margin-bottom: 3rem;
+
+                                    a {
+                                        color: rgba(78, 78, 78, 1);
+                                        text-decoration: none;
+                                        display: flex;
+                                        align-items: center;
+
+                                        img {
+                                            margin-left: 2rem;
+                                        }
+                                    }
+
+                                    #ffSubmenu,
+                                    #fwSubmenu {
+                                        font-size: 2.1rem;
+                                        color: gray;
+                                        height: auto;
+                                        overflow: hidden;
+                                        display: none;
+                                        padding-left: 3rem;
+                                        padding-top: 1rem;
+
+                                        ul {
+                                            li {
+                                                margin-bottom: 1rem;
+
+                                                a {
+                                                    color: rgba(78, 78, 78, .8);
+                                                    font-size: 3.5rem;
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                        .loginSignupBtn {
+                            padding-left: 4rem;
+                            margin-top: 8rem;
+
+                            a {
+                                display: inline-block;
+                                color: rgba(78, 78, 78, .8);
+                                font-size: 3.5rem;
+                                font-weight: 400;
+                                margin-bottom: 3rem;
+
+                                &.signup{
+                                    color: rgb(255, 255, 255);
+                                background-color: rgba(0, 183, 227, 1);
+                                padding: 1.7rem 3.3rem;
+                                border-radius: 1rem;
+                                -webkit-border-radius: 1rem;
+                                -moz-border-radius: 1rem;
+                                -ms-border-radius: 1rem;
+                                -o-border-radius: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottomWrapper {
+                padding-top: 2rem;
+
+                .left {
+                    width: 100%;
+
+                    h1 {
+                        font-size: 4rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    p {
+                        font-family: pRegular;
+                        font-size: 2rem;
+                        margin-bottom: 3.3rem;
+                        padding-right: 0;
+                        color: rgba(78, 78, 78, 1);
+                        line-height: 1.8;
+                    }
+
+                    .btnWrapper {
+                        display: flex;
+                        margin-bottom: 4.5rem;
+
+                        a {
+                            font-size: 1.8rem;
+                            font-family: pBold;
+                            color: rgba(5, 170, 209, 1);
+                            padding: 2rem 3rem;
+                            display: flex;
+                            align-items: center;
+
+                            &:nth-child(1) {
+                                margin-right: 2rem;
+                            }
+
+
+                            svg {
+                                margin-left: 2rem;
+                                width: 2.4rem;
+                                height: 1.6rem;
+
+                                path {
+                                    fill: rgba(5, 170, 209, 1);
+                                    transition: .3s;
+                                    -webkit-transition: .3s;
+                                    -moz-transition: .3s;
+                                    -ms-transition: .3s;
+                                    -o-transition: .3s;
+                                }
+                            }
+
+
+                            &:hover {
+                                color: rgb(255, 255, 255);
+                                background-color: rgb(5, 172, 209);
+
+                                svg {
+                                    path {
+                                        fill: rgb(255, 255, 255);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    .patrner {
+                        h3 {
+                            font-size: 2rem;
+                            margin-bottom: 2.6rem;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+
+                .right {
+                    width: 100%;
+                    margin-top: 5rem;
+                }
+            }
+        }
     }
 }

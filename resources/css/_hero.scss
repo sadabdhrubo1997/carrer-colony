@@ -185,17 +185,23 @@
             }
         }
 
+        .mobileNav{
+            display: none;
+        }
+
         .bottomWrapper {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             padding-top: 4rem;
             position: relative;
             z-index: 100;
 
             .left {
-                width: 106rem;
+                width: 103rem;
                 padding-top: 4rem;
+                margin-bottom: 0;
 
                 h1 {
                     font-family: pXBold;
@@ -288,7 +294,8 @@
             }
 
             .right {
-                width: 60rem;
+                width: 59rem;
+                margin-top: 0;
 
                 img {
                     width: 100%;

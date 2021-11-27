@@ -5,7 +5,7 @@ function setScreenJsResponsive() {
   const ow = window.outerWidth;
   const rootScreenWidth = 1366;
   const rootFontPercentage = 44.46;
-//   console.log(ow);
+  //   console.log(ow);
   if (ow >= 1366) {
     let currentFontSize = (rootFontPercentage * ow) / rootScreenWidth;
     myHtmlElement.setAttribute("style", `font-size:${currentFontSize}%`)
@@ -20,11 +20,11 @@ setScreenJsResponsive()
 // Responsive html font size
 
 window.addEventListener("resize", () => {
-    setScreenJsResponsive()
+  setScreenJsResponsive()
 })
 
 // Responsive html font size end
-function el(selector){
+function el(selector) {
   return document.querySelector(selector)
 }
 
@@ -45,18 +45,15 @@ $('#serviceSliderWrapper').slick({
         slidesToScroll: 1,
         infinite: true,
         dots: false,
-        arrow:false,
+        arrow: false,
         prevArrow: "",
-        nextArrow: "",
+        nextArrow: ""
       }
     },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
+    // You can unslick at a given breakpoint now by adding: settings: "unslick"
     // instead of a settings object
   ]
 });
-
-
 
 $("#testimonialSlider").slick({
   arrow: false,
@@ -77,12 +74,13 @@ $("#testimonialSlider").slick({
         slidesToScroll: 1,
         infinite: true,
         dots: false,
-        arrow:false,
+        arrow: false,
         prevArrow: "",
         nextArrow: "",
+        autoplay: true,
+        autoplaySpeed: 5000
       }
-    },
-    {
+    }, {
       breakpoint: 576,
       settings: {
         centerPadding: '0rem',
@@ -90,13 +88,14 @@ $("#testimonialSlider").slick({
         slidesToScroll: 1,
         infinite: true,
         dots: false,
-        arrow:false,
+        arrow: false,
         prevArrow: "",
         nextArrow: "",
+        autoplay: true,
+        autoplaySpeed: 5000
       }
     },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
+    // You can unslick at a given breakpoint now by adding: settings: "unslick"
     // instead of a settings object
   ]
 });
@@ -109,4 +108,23 @@ $("#heroSlider").slick({
   autoplay: true
 })
 
+// mobile side nav menu
+$("#sideMenuCloseButton").click(function () {
+  $("#sideNavMenu").toggleClass("show");
 
+});
+$("#hambargerIcon").click(function () {
+  $("#sideNavMenu").toggleClass("show");
+
+});
+
+$("#ff").click(function () {
+  $("#ffSubmenu").slideToggle("fast");
+  $("#fwSubmenu").slideUp("fast");
+});
+
+$("#fw").click(function () {
+  $("#fwSubmenu").slideToggle("fast");
+  $("#ffSubmenu").slideUp("fast");
+
+});

@@ -2,6 +2,7 @@
     padding-top: 8rem;
     position: relative;
     overflow-x: hidden;
+    z-index: 0;
 
     &::after {
         position: absolute;
